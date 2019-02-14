@@ -2,6 +2,9 @@ package org.linlinjava.litemall.core.util;
 
 import java.util.Random;
 
+/**
+ * 生成固定长度的随机字母字符串或者随机数字字符串。
+ */
 public class CharUtil {
 
     public static String getRandomString(Integer num) {

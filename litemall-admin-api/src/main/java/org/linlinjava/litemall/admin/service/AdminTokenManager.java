@@ -7,6 +7,9 @@ import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 权限校验，用户是否主动登录
+ */
 public class AdminTokenManager {
     private static Map<String, AdminToken> tokenMap = new HashMap<>();
     private static Map<Integer, AdminToken> idMap = new HashMap<>();

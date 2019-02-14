@@ -18,6 +18,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * 推广服务:广告服务
+ */
 @RestController
 @RequestMapping("/admin/ad")
 @Validated

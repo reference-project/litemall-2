@@ -15,6 +15,11 @@ import javax.validation.ConstraintViolationException;
 import javax.validation.ValidationException;
 import java.util.Set;
 
+/**
+ * 如果系统内部产生了异常而开发者没有catch，那么异常的内容会发送到前端。
+ * 这里通过提供全局异常处理器，来处理所有开发者没有处理的异常，
+ * 返回 “系统内部错误”之类的信息给前端从而达到保护系统的效果。
+ */
 @ControllerAdvice
 public class GlobalExceptionHandler {
 

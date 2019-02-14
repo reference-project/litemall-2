@@ -8,6 +8,9 @@ import java.util.stream.Stream;
 
 /**
  * 对象存储接口
+ * 对象存储服务目前的目标是支持图片的上传下载。
+ * 对象存储服务会自动读取配置配置，然后实例化服务。
+ * 对象存储接口：
  */
 public interface Storage {
 

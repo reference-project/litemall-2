@@ -15,6 +15,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * 搜索历史服务
+ */
 @RestController
 @RequestMapping("/admin/history")
 public class AdminHistoryController {

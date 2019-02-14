@@ -16,6 +16,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * 统计服务
+ */
 @RestController
 @RequestMapping("/admin/stat")
 @Validated

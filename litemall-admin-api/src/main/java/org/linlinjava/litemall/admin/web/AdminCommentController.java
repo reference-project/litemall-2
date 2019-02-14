@@ -18,6 +18,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * 用户品论
+ */
 @RestController
 @RequestMapping("/admin/comment")
 @Validated

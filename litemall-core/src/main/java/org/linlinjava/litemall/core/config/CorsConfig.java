@@ -6,6 +6,10 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
 
+/**
+ * 目前开发过程中，CORS配置是允许所有请求。
+ * 真正部署时，开发者需要做一些调整，来保证当前的服务只接受来自所设置域名的请求。
+ */
 @Configuration
 public class CorsConfig {
     private CorsConfiguration buildConfig() {

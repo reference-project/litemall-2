@@ -19,6 +19,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * 行政区域模块服务·
+ */
 @RestController
 @RequestMapping("/admin/region")
 @Validated

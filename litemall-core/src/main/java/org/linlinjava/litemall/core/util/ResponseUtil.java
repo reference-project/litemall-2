@@ -3,6 +3,9 @@ package org.linlinjava.litemall.core.util;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 设置response中body的内容格式
+ */
 public class ResponseUtil {
     public static Object ok() {
         Map<String, Object> obj = new HashMap<String, Object>();
@@ -54,7 +57,7 @@ public class ResponseUtil {
     }
 
     public static Object unlogin(){
-        return fail(501, "请登录");
+        return fail(501, "请登录la");
     }
 
     public static Object serious(){

@@ -6,6 +6,10 @@ import org.linlinjava.litemall.core.util.ResponseUtil;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * 个人主页测试
+ *
+ */
 @RestController
 @RequestMapping("/admin/index")
 public class AdminIndexController {

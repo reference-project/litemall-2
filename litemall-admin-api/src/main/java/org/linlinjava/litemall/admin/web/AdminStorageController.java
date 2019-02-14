@@ -18,6 +18,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * 对象存储服务
+ */
 @RestController
 @RequestMapping("/admin/storage")
 @Validated

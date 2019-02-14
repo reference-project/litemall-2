@@ -17,6 +17,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * 会员足迹服务
+ */
 @RestController
 @RequestMapping("/admin/footprint")
 @Validated

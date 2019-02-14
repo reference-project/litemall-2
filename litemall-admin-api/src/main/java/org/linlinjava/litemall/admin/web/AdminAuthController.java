@@ -20,6 +20,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
+/**
+ * 授权服务
+ */
 @RestController
 @RequestMapping("/admin/login")
 @Validated
@@ -34,7 +37,8 @@ public class AdminAuthController {
      */
     @PostMapping("/login")
     public Object login(@RequestBody String body){
-        String username = JacksonUtil.parseString(body, "username");
+        System.out.println("参数传进来了");
+       /* String username = JacksonUtil.parseString(body, "username");
         String password = JacksonUtil.parseString(body, "password");
 
         if(StringUtils.isEmpty(username) || StringUtils.isEmpty(password)){
@@ -43,17 +47,18 @@ public class AdminAuthController {
 
         List<LitemallAdmin> adminList = adminService.findAdmin(username);
         Assert.state(adminList.size() < 2, "同一个用户名存在两个账户");
-        if(adminList.size() == 0){
-            return ResponseUtil.badArgumentValue();
-        }
+//        if(adminList.size() == 0){
+//            return ResponseUtil.badArgumentValue();
+//        }
         LitemallAdmin admin = adminList.get(0);
 
         BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
         if(!encoder.matches(password, admin.getPassword())){
             return ResponseUtil.fail(403, "账号密码不对");
-        }
-
-        Integer adminId = admin.getId();
+        }*/
+      //TODO 这里先暂时赋值为1
+//        Integer adminId = admin.getId();
+        Integer adminId=1;
         // token
         AdminToken adminToken = AdminTokenManager.generateToken(adminId);
 

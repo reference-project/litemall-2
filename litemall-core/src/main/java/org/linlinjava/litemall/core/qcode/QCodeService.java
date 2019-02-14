@@ -15,6 +15,9 @@ import java.awt.image.BufferedImage;
 import java.io.*;
 import java.net.URL;
 
+/**
+ * 生成图片二维码
+ */
 @Service
 public class QCodeService {
     @Autowired

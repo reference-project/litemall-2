@@ -20,6 +20,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * 会员管理服务
+ */
 @RestController
 @RequestMapping("/admin/user")
 @Validated

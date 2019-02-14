@@ -24,6 +24,9 @@ import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 import java.util.*;
 
+/**
+ * 商品管理
+ */
 @RestController
 @RequestMapping("/admin/goods")
 @Validated

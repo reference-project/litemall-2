@@ -22,13 +22,8 @@ import java.security.SecureRandom;
 import java.util.regex.Pattern;
 
 /**
- * Implementation of PasswordEncoder that uses the BCrypt strong hashing function. Clients
- * can optionally supply a "strength" (a.k.a. log rounds in BCrypt) and a SecureRandom
- * instance. The larger the strength parameter the more work will have to be done
- * (exponentially) to hash the passwords. The default value is 10.
- *
- * @author Dave Syer
- *
+ * 这里是用于对用户密码或者管理员密码加密存储。
+ * bcypt代码本质上是spring里面的代码。
  */
 public class BCryptPasswordEncoder {
     private Pattern BCRYPT_PATTERN = Pattern

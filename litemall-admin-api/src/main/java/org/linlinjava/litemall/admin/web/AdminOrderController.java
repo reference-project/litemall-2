@@ -31,6 +31,16 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * 订单管理服务
+ * 定时任务：
+ *     checkOrderUnpaid
+ *     checkOrderUnconfirm
+ *     checkOrderComment
+ *
+ *
+ *
+ */
 @RestController
 @RequestMapping("/admin/order")
 @Validated
@@ -219,6 +229,10 @@ public class AdminOrderController {
 
         return ResponseUtil.ok();
     }
+
+    /**
+     * 定时服务
+     */
 
     /**
      * 自动取消订单

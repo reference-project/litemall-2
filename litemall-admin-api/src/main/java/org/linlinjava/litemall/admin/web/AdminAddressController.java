@@ -21,6 +21,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * 收货地址服务1
+ */
 @RestController
 @RequestMapping("/admin/address")
 @Validated

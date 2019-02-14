@@ -18,6 +18,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * 品牌制造商服务
+ */
 @RestController
 @RequestMapping("/admin/brand")
 @Validated

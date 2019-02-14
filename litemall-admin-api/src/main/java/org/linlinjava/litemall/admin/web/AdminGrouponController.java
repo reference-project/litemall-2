@@ -23,6 +23,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * 服务：团购服务
+ */
 @RestController
 @RequestMapping("/admin/groupon")
 @Validated

@@ -9,6 +9,11 @@ import org.springframework.util.StringUtils;
 import java.io.IOException;
 import java.util.List;
 
+/**
+ * 当请求时POST时，请求的json内容在body。 通常存在存在两种方式取出数据：
+ *  如果json内容正好对应一个POJO，那么在方法中使用POJO时，spring会自动解析填充数据；
+ *  或者开发者自己采用jackson或者其他json处理库手动解析数据。
+ */
 public class JacksonUtil {
     public static String parseString(String body, String field) {
         ObjectMapper mapper = new ObjectMapper();

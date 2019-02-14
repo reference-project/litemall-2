@@ -17,6 +17,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * 会员收藏服务
+ */
 @RestController
 @RequestMapping("/admin/collect")
 @Validated
