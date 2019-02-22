@@ -185,17 +185,17 @@ public class WxAuthController {
 
     /**
      * 请求验证码
-     *
      * @param body 手机号码{mobile}
      * @return
      */
     @PostMapping("regCaptcha")
     public Object registerCaptcha(@RequestBody String body) {
         String phoneNumber = JacksonUtil.parseString(body, "mobile");
-        String code = CharUtil.getRandomNum(6);
-
+         //TODO 验证码统一为 000000
+//         String code = CharUtil.getRandomNum(6);
+           String  code="000000";
         notifyService.notifySmsTemplate(phoneNumber, NotifyType.CAPTCHA, new String[]{code});
-
+       //请求验证码，添加到缓存中
         boolean successful = CaptchaCodeManager.addToCache(phoneNumber, code);
         return successful ? ResponseUtil.ok() : ResponseUtil.badArgument();
     }
@@ -228,6 +228,7 @@ public class WxAuthController {
      */
     @PostMapping("register")
     public Object register(@RequestBody String body, HttpServletRequest request) {
+        logger.info("请求注册参数为"+body);
         String username = JacksonUtil.parseString(body, "username");
         String password = JacksonUtil.parseString(body, "password");
         String mobile = JacksonUtil.parseString(body, "mobile");
@@ -241,28 +242,29 @@ public class WxAuthController {
         if (userList.size() > 0) {
             return ResponseUtil.fail(403, "用户名已注册");
         }
-
+        if (!RegexUtil.isMobileExact(mobile)) {
+            return ResponseUtil.fail(403, "手机号格式不正确");
+        }
         userList = userService.queryByMobile(mobile);
         if (userList.size() > 0) {
             return ResponseUtil.fail(403, "手机号已注册");
         }
-        if (!RegexUtil.isMobileExact(mobile)) {
-            return ResponseUtil.fail(403, "手机号格式不正确");
-        }
+
+        //TODO 验证码还没做，暂存到缓存中了
         //判断验证码是否正确
         String cacheCode = CaptchaCodeManager.getCachedCaptcha(mobile);
         if (cacheCode == null || cacheCode.isEmpty() || !cacheCode.equals(code))
             return ResponseUtil.fail(403, "验证码错误");
 
         LitemallUser user = new LitemallUser();
-
+        //TODO 密码加密，在这里我们先不加密，存到数据里面的是明文密码
         BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
         String encodedPassword = encoder.encode(password);
-        user.setPassword(encodedPassword);
+        user.setPassword(password);
 
         user = new LitemallUser();
         user.setUsername(username);
-        user.setPassword(encodedPassword);
+        user.setPassword(password);
         user.setMobile(mobile);
         user.setWeixinOpenid("");
         user.setAvatar("https://yanxuan.nosdn.127.net/80841d741d7fa3073e0ae27bf487339f.jpg?imageView&quality=90&thumbnail=64x64");

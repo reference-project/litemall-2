@@ -43,23 +43,6 @@ public class JacksonUtil {
         return null;
     }
 
-    public static List<Integer> parseIntegerList(String body, String field) {
-        ObjectMapper mapper = new ObjectMapper();
-        JsonNode node = null;
-        try {
-            node = mapper.readTree(body);
-            JsonNode leaf = node.get(field);
-
-            if(leaf != null)
-                return mapper.convertValue(leaf, new TypeReference<List<String>>(){});
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-
-
-
     public static Boolean parseBoolean(String body, String field) {
         ObjectMapper mapper = new ObjectMapper();
         JsonNode node = null;
@@ -106,6 +89,20 @@ public class JacksonUtil {
         return null;
     }
 
+    public static List<Integer> parseIntegerList(String body, String field) {
+        ObjectMapper mapper = new ObjectMapper();
+        JsonNode node = null;
+        try {
+            node = mapper.readTree(body);
+            JsonNode leaf = node.get(field);
+            if(leaf != null)
+                return mapper.convertValue(leaf, new TypeReference<List<String>>(){});
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
     public static <T> T parseObject(String body, String field, Class<T> clazz) {
         ObjectMapper mapper = new ObjectMapper();
         JsonNode node = null;
@@ -130,7 +127,6 @@ public class JacksonUtil {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
         return null;
     }
 

@@ -32,7 +32,6 @@ public class NotifyService {
     public void notifySms(String phoneNumber, String message) {
         if (mailSender == null)
             return;
-
         smsSender.send(phoneNumber, message);
     }
 
@@ -47,7 +46,6 @@ public class NotifyService {
     public void notifySmsTemplate(String phoneNumber, NotifyType notifyType, String[] params) {
         if (smsSender == null)
             return;
-
         int templateId = Integer.parseInt(getTemplateId(notifyType, smsTemplate));
 
         smsSender.sendWithTemplate(phoneNumber, templateId, params);

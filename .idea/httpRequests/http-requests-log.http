@@ -1,0 +1,291 @@
+POST http://localhost:8080/wx?username=admin123&password=admin123
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-02-22T042319.404.json
+
+###
+
+POST http://localhost:8080/wx?username=admin123&password=admin123
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-02-22T042256.404.json
+
+###
+
+POST http://localhost:8080/wx?username=admin123&password=admin123
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-02-22T042229.404.json
+
+###
+
+POST http://localhost:8080/wx?username=admin123&password=admin123
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-02-22T042213.404.json
+
+###
+
+POST http://localhost:8083/admin/login//login?username=admin123&password=admin123
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-01-16T060205.200.json
+
+###
+
+POST http://localhost:8080/admin/login//login?username=admin123&password=admin123
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8080/admin/login//login?username=admin123&mobile=admin123&adminId=1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-01-16T055657.200.json
+
+###
+
+GET http://localhost:8080/admin/user/list?adminId=1&username=admin123&mobile=admin123&adminId=1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-01-16T050625.200.json
+
+###
+
+GET http://localhost:8083/admin/user/list?adminId=1&username=admin123&mobile=admin123&adminId=1
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8080/admin/user/list?adminId=1&username=admin123&mobile=admin123&adminId=1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-01-16T044452.200.json
+
+###
+
+GET http://localhost:8080/admin/user/list?adminId=1&username=admin123&mobile=admin123
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-01-16T044418.200.json
+
+###
+
+GET http://localhost:8080/admin/user/list?adminId=1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-01-16T044257.200.json
+
+###
+
+GET http://localhost:8080/admin/user/list?adminId=1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-01-16T044212.200.json
+
+###
+
+GET http://localhost:8080/admin/user/list?adminId=11
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-01-16T044100.200.json
+
+###
+
+POST http://localhost:8080/admin/user/list?adminId=11
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-01-16T043839.200.json
+
+###
+
+POST http://localhost:8080/admin/user/list?adminId=11
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-01-16T043818.200.json
+
+###
+
+POST http://localhost:8080/admin/address//list?adminId=11
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-01-16T043653.200.json
+
+###
+
+POST http://localhost:8080/admin/address//list?adminId=11&adminId=
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-01-16T043606.200.json
+
+###
+
+POST http://localhost:8080/admin/address//list?adminId=11&adminId=
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-01-16T043605.200.json
+
+###
+
+POST http://localhost:8080/admin/address//list?adminId=11&adminId=
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-01-16T043604.200.json
+
+###
+
+POST http://localhost:8080/admin/address//list?adminId=11&adminId=
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-01-16T043522.200.json
+
+###
+
+GET http://localhost:8080/admin/address//list?adminId=11
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-01-16T043456.200.json
+
+###
+
+GET http://localhost:8080/admin/index/index?adminId=11
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-01-16T043358.200.json
+
+###
+
+GET http://localhost:8080/admin/index/index?adminId=11
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8080/admin/index/index?adminId=11
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8080/admin/user/list?adminId=11
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8080/admin/user/list?adminId=11
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8080/admin/user/list?adminId=11
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8080/admin/user/list?adminId=11
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-01-16T042622-1.200.json
+
+###
+
+GET http://localhost:8080/admin/user/list?adminId=11
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-01-16T042622.200.json
+
+###
+
+GET http://localhost:8080/admin/user/list?adminId=11
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-01-16T042620.200.json
+
+###
+
+GET http://localhost:8080/admin/user/list?adminId=11
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-01-16T042459.200.json
+
+###
+
+GET http://localhost:8080/admin/user/list?adminId=11
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-01-16T042356.200.json
+
+###
+
+GET http://localhost:8080/admin/user/list?adminId=11
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-01-16T041653.200.json
+
+###
+
+GET http://localhost:8080/admin/user/list
+Accept: */*
+Cache-Control: no-cache
+adminId: 1
+
+<> 2019-01-16T041606.200.json
+
+###
+
+GET http://localhost:8080/admin/user/list
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-01-16T041450.200.json
+
+###
+
+GET http://localhost:8080/admin/index/index
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-01-16T041306.200.json
+
+###
+
+GET http://localhost:8080//admin/ad
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-01-16T041230.404.json
+
+###
+

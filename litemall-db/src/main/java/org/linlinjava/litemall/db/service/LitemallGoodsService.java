@@ -21,7 +21,6 @@ public class LitemallGoodsService {
 
     /**
      * 获取热卖商品
-     *
      * @param offset
      * @param limit
      * @return
@@ -31,13 +30,11 @@ public class LitemallGoodsService {
         example.or().andIsHotEqualTo(true).andDeletedEqualTo(false);
         example.setOrderByClause("add_time  desc");
         PageHelper.startPage(offset, limit);
-
         return goodsMapper.selectByExampleSelective(example, columns);
     }
 
     /**
      * 获取新品上市
-     *
      * @param offset
      * @param limit
      * @return

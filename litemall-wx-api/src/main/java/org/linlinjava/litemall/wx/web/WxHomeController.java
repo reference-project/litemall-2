@@ -75,27 +75,33 @@ public class WxHomeController {
         }
 
         Map<String, Object> data = new HashMap<>();
-
+        //首页轮播图
         List<LitemallAd> banner = adService.queryIndex();
         data.put("banner", banner);
-
+       //类目表
         List<LitemallCategory> channel = categoryService.queryChannel();
         data.put("channel", channel);
 
-        List<LitemallGoods> newGoods = goodsService.queryByNew(0, SystemConfig.getNewLimit());
-        data.put("newGoodsList", newGoods);
+        //优惠专区
+        List<LitemallGrouponRules> grouponRules = grouponRulesService.queryByIndex(0, 5);
 
-        List<LitemallGoods> hotGoods = goodsService.queryByHot(0, SystemConfig.getHotLimit());
-        data.put("hotGoodsList", hotGoods);
-
+        //品牌商表
         List<LitemallBrand> brandList = brandService.queryVO(0, SystemConfig.getBrandLimit());
         data.put("brandList", brandList);
 
+       //新品首发
+        List<LitemallGoods> newGoods = goodsService.queryByNew(0, SystemConfig.getNewLimit());
+        data.put("newGoodsList", newGoods);
+
+        //人气推荐
+        List<LitemallGoods> hotGoods = goodsService.queryByHot(0, SystemConfig.getHotLimit());
+        data.put("hotGoodsList", hotGoods);
+
+       //专题表
         List<LitemallTopic> topicList = topicService.queryList(0, SystemConfig.getTopicLimit());
         data.put("topicList", topicList);
 
-        //优惠专区
-        List<LitemallGrouponRules> grouponRules = grouponRulesService.queryByIndex(0, 5);
+
         List<LitemallGoods> grouponGoods = new ArrayList<>();
         List<Map<String, Object>> grouponList = new ArrayList<>();
         for (LitemallGrouponRules rule : grouponRules) {

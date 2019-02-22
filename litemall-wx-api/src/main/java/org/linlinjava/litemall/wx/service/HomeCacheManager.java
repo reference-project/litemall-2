@@ -6,6 +6,7 @@ import java.util.Map;
 
 /**
  * 简单缓存的数据
+ * 缓存数据用Map暂时缓存数据
  */
 public class HomeCacheManager {
     public static final boolean ENABLE = true;

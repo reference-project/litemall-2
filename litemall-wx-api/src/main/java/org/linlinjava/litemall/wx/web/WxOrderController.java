@@ -565,12 +565,13 @@ public class WxOrderController {
         }
 
         LitemallOrder order = orderService.findById(orderId);
-        if (order == null) {
-            return ResponseUtil.badArgumentValue();
-        }
         if (!order.getUserId().equals(userId)) {
             return ResponseUtil.badArgumentValue();
         }
+        if (order == null) {
+            return ResponseUtil.badArgumentValue();
+        }
+
 
         // 检测是否能够取消
         OrderHandleOption handleOption = OrderUtil.build(order);
@@ -595,7 +596,7 @@ public class WxOrderController {
             fee = actualPrice.multiply(new BigDecimal(100)).intValue();
             orderRequest.setTotalFee(fee);
             orderRequest.setSpbillCreateIp(IpUtil.getIpAddr(request));
-
+            //TODO 微信返回订单的状态 这个暂时没有接入
             result = wxPayService.createOrder(orderRequest);
 
             //缓存prepayID用于后续模版通知
@@ -604,6 +605,7 @@ public class WxOrderController {
             LitemallUserFormid userFormid = new LitemallUserFormid();
             userFormid.setOpenid(user.getWeixinOpenid());
             userFormid.setFormid(prepayId);
+            //设置付款状态
             userFormid.setIsprepay(true);
             userFormid.setUseamount(3);
             userFormid.setExpireTime(LocalDateTime.now().plusDays(7));
