@@ -90,10 +90,10 @@
       <image class='user_tool_item_image' src='/static/images/customer.png'></image>
       <view class='user_tool_item_text'>联系客服</view>
     </view>
-    <view class='user_tool_item' bindtap='aboutUs'>
+    <!-- <view class='user_tool_item' bindtap='aboutUs'>
       <image class='user_tool_item_image' src='/static/images/about_us.png'></image>
       <view class='user_tool_item_text'>关于我们</view>
-    </view>
+    </view> -->
   </view>
 
   <!--<view class="logout" bindtap="exitLogin">退出登录</view>-->
