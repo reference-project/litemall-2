@@ -149,7 +149,7 @@ Page({
        'signType': payParam.signType,
        'paySign': payParam.paySign,
        'success': function(res) {
-        console.log("支付过程成功");
+         console.log("支付过程成功" + '/pages/payResult/payResult?status=1&orderId=' + orderId);
         wx.redirectTo({
          url: '/pages/payResult/payResult?status=1&orderId=' + orderId
         });

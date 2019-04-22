@@ -3,6 +3,7 @@ package org.linlinjava.litemall.db;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.linlinjava.litemall.db.dao.LitemallAddressMapper;
 import org.linlinjava.litemall.db.dao.LitemallSystemMapper;
 import org.linlinjava.litemall.db.domain.LitemallSystem;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +19,9 @@ public class MapperReturnTest {
     @Autowired
     private LitemallSystemMapper systemMapper;
 
+    @Autowired
+    private LitemallAddressMapper litemallAddressMapper;
+
     @Test
     public void test() {
         LitemallSystem system = new LitemallSystem();
@@ -32,6 +36,16 @@ public class MapperReturnTest {
         updates = systemMapper.updateByPrimaryKey(system);
         Assert.assertEquals(updates, 0);
     }
+
+    @Test
+    public void test2() {
+        long test=litemallAddressMapper.test("aa");
+
+        System.out.println(test);
+    }
+
+
+
 
 }
 

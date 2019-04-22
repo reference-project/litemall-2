@@ -542,7 +542,7 @@ public class WxOrderController {
     }
 
     /**
-     * 付款订单的预支付会话标识
+     * 付款订单的预支付会话标识(点击去付款调用的借口)
      * <p>
      * 1. 检测当前订单是否能够付款
      * 2. 微信支付平台返回支付订单ID
@@ -593,10 +593,11 @@ public class WxOrderController {
             // 元转成分
             Integer fee = 0;
             BigDecimal actualPrice = order.getActualPrice();
-            fee = actualPrice.multiply(new BigDecimal(100)).intValue();
+//            fee = actualPrice.multiply(new BigDecimal(100)).intValue();
+            fee = 1;
             orderRequest.setTotalFee(fee);
             orderRequest.setSpbillCreateIp(IpUtil.getIpAddr(request));
-            //TODO 微信返回订单的状态 这个暂时没有接入
+            //TODO 微信返回订单的状态 这个没有接入
             result = wxPayService.createOrder(orderRequest);
 
             //缓存prepayID用于后续模版通知
@@ -653,10 +654,9 @@ public class WxOrderController {
             e.printStackTrace();
             return WxPayNotifyResponse.fail(e.getMessage());
         }
-
         logger.info("处理腾讯支付平台的订单支付");
         logger.info(result);
-
+       //查询根据返回的订单号查询订单
         String orderSn = result.getOutTradeNo();
         String payId = result.getTransactionId();
 

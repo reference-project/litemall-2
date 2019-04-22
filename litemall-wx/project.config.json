@@ -8,8 +8,8 @@
 		"newFeature": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "1.9.93",
-	"appid": "wxb23cce3c58e8bb99",
+	"libVersion": "2.6.5",
+	"appid": "wx7ffc14ae576504de",
 	"projectname": "litemall-wx",
 	"condition": {
 		"search": {

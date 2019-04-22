@@ -85,4 +85,12 @@ public class LitemallAddressService {
 
         return (int)addressMapper.countByExample(example);
     }
+
+public  Long test(){
+      Long longId= addressMapper.test("11");
+    return longId;
+}
+    public static void main(String[] args) {
+
+    }
 }
